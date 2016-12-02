@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Html5 Form</title>
+    <link href="css/form.css" rel="stylesheet" />
+    <script src="js/jquery-1.7.1.js"></script> 
+    <script src="js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="js-webshim/minified/polyfiller.js"></script> 
+</head>
+<body>
+	<div id="content" class="group" role="main">
+		
+		
+		<form id="redemption" method="post">
+			<hgroup>
+				<h1>HTML5 Form</h1>
+				<h2>Here's the HTML5 Form controlers Let's try ...</h2>
+			</hgroup>
+			<fieldset>
+				<legend>About the HTML (part 1 of 3)</legend>
+				<div>
+					<label for="h_Name">The HTML Name</label>
+					<input id="h_Name" name="h_Name" type="text" placeholder="HTML5" required aria-required="true">
+				</div>
+				<div>
+					<label for="h_Year">Year</label>
+					<input id="h_Year" name="h_Year" type="number" min="1929" max="2015" required aria-required="true">
+				</div>
+				<div>
+					<label for="h_data">Datalist</label>
+					<input id="h_data" name="h_data" type="text" list="awards">
+					<datalist id="awards">
+						<select>					
+							<option value="Best Picture"></option>
+							<option value="Best Director"></option>
+							<option value="Best Adapted Screenplay"></option>
+							<option value="Best Original Screenplay"></option>
+						</select>
+					</datalist>
+				</div>
+				<div>
+					<label for="h_text">Textarea</label>
+					<textarea id="h_text" name="h_text" placeholder="textarea..." required aria-required="true" ></textarea>
+				</div>
+				<div>
+					<label for="h_range">Range</label>
+					<input id="h_range" name="h_range" type="range" min="1" max="10" value="5" onchange="showValue(this.value)"><span id="range">5</span>
+					
+				</div>
+				<script>
+				function showValue(newValue)
+				{
+					document.getElementById("range").innerHTML=newValue;
+				}
+				</script>
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>About the HTML (part 2 of 3)</legend>
+				
+				<div>
+					<label for="h2_name">HTML</label>
+					<input id="h2_name" name="h2_name" type="text" placeholder="HTML5" required aria-required="true" >
+				</div>
+				
+				<div>
+					<label for="h2_text">Textarea</label>
+					<textarea id="h2_text" name="h2_text" placeholder="Lorem ipsum dolor sit amet, distinctio." required aria-required="true" ></textarea>
+				</div>
+				<div>
+					<label for="h_number">Number Step</label>
+					<input id="h_number" name="h_number" type="number" min="1" max="10" value="5" required aria-required="true" step="2">
+				</div>
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>About the HTML (part 3 of 3)</legend>
+				
+				<div>
+					<label for="name">Your Name</label>
+					<input id="name" name="name" pattern="([a-zA-Z]{3,30}\s*)+[a-zA-Z]{3,30}" placeholder="Marlboro" required aria-required="true" >
+				</div>
+				<div>
+					<label for="color">Your favorite color</label>
+					<input id="color" name="color" type="color">
+				</div>
+				<div>
+					<label for="date">Date/Time</label>
+					<input id="Employee_hireDate" class="pickDate" type="month" name="Employee[hireDate]" />
+				</div>
+				<div>
+					<label for="tel">Telephone </label>
+					<input id="tel" name="tel" type="tel" placeholder="1-234-546758" autocomplete="off" required aria-required="true" >
+				</div>
+				<div>
+					<label for="email">Your Email address</label>
+					<input id="email" name="email" type="email" placeholder="Marlboro@163.com" required aria-required="true">
+				</div>
+				<div>
+					<label for="web">Your Web address</label>
+					<input id="web" name="web" type="url" placeholder="www.mysite.com">
+				</div>
+				
+			</fieldset>
+			<input type="submit" id="submit" value="submit">
+		</form>
+		
+	</div>
+    
+</body>
+</html>
