@@ -20,6 +20,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 :focus {
 	outline: 0;
 }
+*{
+	transition:all 1s;
+	-webkit-transition:all 1s
+}
 body {
 	line-height: 1;
 	color: black;
